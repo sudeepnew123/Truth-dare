@@ -6,6 +6,6 @@ services:
     startCommand: python bot.py
     envVars:
       - key: BOT_TOKEN
-        value: your_telegram_bot_token_here
+        value: 7639342400:AAHsPkoYpYg9MpQ43RzkTiz3N7OkfY816Qs
       - key: CHAT_ID
         value: -1002315817553
