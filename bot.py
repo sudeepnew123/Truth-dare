@@ -5,6 +5,10 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 import os
+import os
+
+BOT_TOKEN = os.environ["BOT_TOKEN"]
+CHAT_ID = int(os.environ["CHAT_ID"])  # Always convert CHAT_ID to int
 
 logging.basicConfig(level=logging.INFO)
 
