@@ -110,8 +110,13 @@ async def main():
     scheduler.add_job(lambda: weekly_post(app), "cron", day_of_week="sun", hour=9)
     scheduler.start()
 
-    await app.run_polling()
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    from telegram.ext import ApplicationBuilder
+    app = ApplicationBuilder().token(BOT_TOKEN).build()
+    
+    # sab handler yahan add karo...
+
+    app.run_polling()  # No await, no async needed
+    
   
